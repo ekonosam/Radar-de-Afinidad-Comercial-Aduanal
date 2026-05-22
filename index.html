@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Radar Comercial Aduanal | Dashboard Power BI</title>
+  <meta name="description" content="Landing page profesional para presentar un dashboard interactivo de Power BI enfocado en inteligencia comercial aduanal y prospección B2B." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header" id="top">
+    <nav class="navbar">
+      <a href="#top" class="brand" aria-label="Radar Comercial Aduanal">
+        <span class="brand-mark">RCA</span>
+        <span>Radar Comercial Aduanal</span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú de navegación">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#dashboard">Dashboard</a></li>
+        <li><a href="#uso">Cómo usarlo</a></li>
+        <li><a href="#metodologia">Metodología</a></li>
+        <li><a href="#valor">Valor</a></li>
+        <li><a href="#limitaciones">Limitaciones</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero section-padding">
+      <div class="hero-pattern"></div>
+
+      <div class="container hero-grid">
+        <div class="hero-content reveal">
+          <p class="eyebrow">Power BI · Comercio exterior · Prospección B2B</p>
+          <h1>Radar Comercial Aduanal</h1>
+          <p class="hero-subtitle">
+            Dashboard interactivo para explorar productos, fracciones arancelarias
+            relevantes y empresas potencialmente relacionadas usando datos públicos.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#dashboard" class="btn btn-primary">Explorar dashboard</a>
+            <a href="#metodologia" class="btn btn-secondary">Leer metodología</a>
+          </div>
+        </div>
+
+        <aside class="hero-summary reveal" aria-label="Resumen del proyecto">
+          <div class="summary-badge">Dashboard en vivo</div>
+          <h2>De una búsqueda de producto a una lista inicial de prospectos</h2>
+          <p>
+            Esta página está lista para alojar tu reporte publicado desde Power BI
+            mediante un iframe público.
+          </p>
+
+          <div class="mini-metrics">
+            <div><strong>01</strong><span>Producto</span></div>
+            <div><strong>02</strong><span>Fracción</span></div>
+            <div><strong>03</strong><span>Empresa</span></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="dashboard-section section-padding" id="dashboard">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Dashboard interactivo</p>
+          <h2>Explora el reporte directamente desde Power BI</h2>
+          <p>
+            Usa los filtros del reporte para buscar productos, revisar fracciones
+            arancelarias relevantes, comparar rankings y explorar empresas en el mapa.
+          </p>
+        </div>
+
+        <div class="dashboard-shell reveal">
+          <div class="dashboard-toolbar">
+            <div><span class="status-dot"></span><strong>Power BI Embed</strong></div>
+            <a class="toolbar-link" href="#configuracion">Configurar enlace</a>
+          </div>
+
+          <div class="powerbi-frame-wrapper" id="powerbiFrameWrapper">
+            <div class="placeholder-card" id="powerbiPlaceholder">
+              <p class="placeholder-label">Falta configurar el embed</p>
+              <h3>Pega tu enlace público de Power BI en <code>script.js</code></h3>
+              <p>
+                Reemplaza la variable <code>POWER_BI_EMBED_URL</code> con el valor
+                del atributo <code>src</code> del iframe generado por Power BI.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="public-note reveal">
+          <strong>Nota:</strong>
+          El reporte embebido con “Publish to web” es público. No debe contener
+          información confidencial, privada o propietaria.
+        </div>
+      </div>
+    </section>
+
+    <section class="section-padding soft-bg" id="uso">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Cómo usarlo</p>
+          <h2>Flujo de lectura recomendado</h2>
+        </div>
+
+        <div class="steps-grid">
+          <article class="step-card reveal">
+            <span>1</span>
+            <h3>Busca un producto</h3>
+            <p>Escribe un término comercial, por ejemplo ropa, autopartes o maquinaria.</p>
+          </article>
+
+          <article class="step-card reveal">
+            <span>2</span>
+            <h3>Revisa la fracción</h3>
+            <p>Identifica qué fracción arancelaria concentra mayor actividad comercial.</p>
+          </article>
+
+          <article class="step-card reveal">
+            <span>3</span>
+            <h3>Observa empresas</h3>
+            <p>Consulta establecimientos potencialmente relacionados mediante el cruce sectorial.</p>
+          </article>
+
+          <article class="step-card reveal">
+            <span>4</span>
+            <h3>Prioriza investigación</h3>
+            <p>Usa el ranking y el mapa como punto de partida para búsqueda comercial.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-padding" id="metodologia">
+      <div class="container methodology-layout">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Metodología</p>
+          <h2>Cómo se construye la relación entre producto, fracción y empresa</h2>
+          <p>
+            El dashboard no confirma operaciones exactas por empresa. Organiza datos
+            públicos para crear una aproximación útil para exploración comercial.
+          </p>
+        </div>
+
+        <div class="accordion reveal">
+          <button class="accordion-button active" data-panel="panel-1">1. Selección del producto</button>
+          <div class="accordion-panel active" id="panel-1">
+            <p>El usuario parte de una búsqueda sencilla de producto. Esa búsqueda filtra el universo de fracciones arancelarias relacionadas.</p>
+          </div>
+
+          <button class="accordion-button" data-panel="panel-2">2. Ranking de fracciones</button>
+          <div class="accordion-panel" id="panel-2">
+            <p>Las fracciones se comparan usando indicadores como valor comercial, volumen o relevancia dentro de la búsqueda.</p>
+          </div>
+
+          <button class="accordion-button" data-panel="panel-3">3. Cruce sectorial</button>
+          <div class="accordion-panel" id="panel-3">
+            <p>La relación empresa-fracción se aproxima mediante ramas económicas o sectores relacionados. Esta unión sirve para exploración, no para validación definitiva.</p>
+          </div>
+
+          <button class="accordion-button" data-panel="panel-4">4. Visualización en Power BI</button>
+          <div class="accordion-panel" id="panel-4">
+            <p>Power BI integra buscadores, ranking, tarjeta de empresa destacada y mapa para convertir la información en una herramienta navegable.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-padding dark-section" id="valor">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Valor para negocio</p>
+          <h2>Una herramienta exploratoria para prospección aduanal y logística</h2>
+        </div>
+
+        <div class="value-grid">
+          <article class="value-card reveal">
+            <h3>Priorización comercial</h3>
+            <p>Ayuda a elegir productos o sectores con señales de actividad comercial.</p>
+          </article>
+
+          <article class="value-card reveal">
+            <h3>Prospección B2B</h3>
+            <p>Genera una lista inicial de empresas que pueden investigarse con mayor detalle.</p>
+          </article>
+
+          <article class="value-card reveal">
+            <h3>Lectura territorial</h3>
+            <p>Permite revisar ubicación de establecimientos y posibles zonas de oportunidad.</p>
+          </article>
+
+          <article class="value-card reveal">
+            <h3>Comunicación ejecutiva</h3>
+            <p>Resume datos complejos en una experiencia visual fácil de explicar.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-padding limitation-section" id="limitaciones">
+      <div class="container limitation-layout">
+        <div class="reveal">
+          <p class="eyebrow">Limitaciones</p>
+          <h2>El dashboard orienta la investigación, no sustituye validación comercial</h2>
+        </div>
+
+        <div class="limitation-card reveal">
+          <p>
+            La relación entre fracción arancelaria y empresa se construye mediante
+            una aproximación por rama o sector económico. Por eso, el reporte no debe
+            interpretarse como prueba de que una empresa importe, exporte o venda
+            exactamente una fracción específica.
+          </p>
+          <p>
+            Su uso más adecuado es como filtro inicial para reducir el universo de
+            búsqueda y priorizar empresas o sectores que después deben validarse con
+            investigación comercial directa.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-padding setup-section" id="configuracion">
+      <div class="container setup-card reveal">
+        <p class="eyebrow">Configuración rápida</p>
+        <h2>Dónde pegar tu iframe de Power BI</h2>
+        <p>
+          En <code>script.js</code>, reemplaza el valor vacío de
+          <code>POWER_BI_EMBED_URL</code> con el enlace que aparece dentro de
+          <code>src="..."</code> en el iframe de Power BI.
+        </p>
+
+        <pre><code>const POWER_BI_EMBED_URL = "https://app.powerbi.com/view?r=TU_CODIGO";</code></pre>
+      </div>
+    </section>
+  </main>
+
+  <button class="back-to-top" id="backToTop" aria-label="Volver arriba">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
